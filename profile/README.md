@@ -8,11 +8,11 @@
 <h3 align="center">AirCodes is an open-source Discord coin system with code generation, web interface, and user management.</h3> 
 
 
-- 🚀 **[Website](https://aircodes.net)**
+- ☁️ **[Website](https://aircodes.net)**
 
 - 📫 **contact@aircodes.net**
 
-- 🛠️ Tech:  **[Node.js](https://nodejs.org)**• **[Discord.js](https://discord.js.org)** • **[SQLite](https://www.sqlite.org)** • **[Docker](https://www.docker.com)** • **[NGINX](https://nginx.org)**
+- 🛠️ Tech:  **[Node.js](https://nodejs.org)** • **[Discord.js](https://discord.js.org)** • **[SQLite](https://www.sqlite.org)** • **[Docker](https://www.docker.com)** • **[NGINX](https://nginx.org)**
 
 
 ---
