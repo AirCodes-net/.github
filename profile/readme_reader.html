@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>README.md Preview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #181c20;
+      color: #e6e6e6;
+    }
+    #header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #23272d;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    #reloadBtn {
+      background: #28a745;
+      border: none;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    #reloadBtn:hover {
+      background: #218838;
+    }
+    #content {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #23272d;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.16);
+      min-height: 200px;
+    }
+    pre, code {
+      background: #181c20;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 95%;
+      font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+      color: #e6e6e6;
+    }
+    pre {
+      padding: 12px;
+      overflow-x: auto;
+    }
+    img {
+      max-width: 100%;
+    }
+    a {
+      color: #58a6ff;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #363b41;
+      padding: 6px 13px;
+    }
+    th {
+      background-color: #23272d;
+    }
+    blockquote {
+      color: #b3b3b3;
+      border-left: 4px solid #363b41;
+      padding: 0 1em;
+      margin: 0.5em 0;
+      background: #23272d;
+    }
+  </style>
+  <!-- CDN de Marked.js pour le rendu Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="header">
+    <button id="reloadBtn" title="Recharger le README.md">⟳ Reload</button>
+  </div>
+  <div id="content">Chargement du README.md...</div>
+  <script>
+    async function loadReadme() {
+      const content = document.getElementById('content');
+      try {
+        const response = await fetch('README.md');
+        if (!response.ok) throw new Error('README.md introuvable');
+        const text = await response.text();
+        content.innerHTML = marked.parse(text);
+      } catch (e) {
+        content.innerHTML = "<b>Erreur :</b> Impossible de charger le fichier README.md<br><pre>" + e + "</pre>";
+      }
+    }
+    document.getElementById('reloadBtn').onclick = loadReadme;
+    window.onload = loadReadme;
+  </script>
+</body>
+</html>
