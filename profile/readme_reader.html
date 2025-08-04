@@ -82,23 +82,24 @@
 </head>
 <body>
   <div id="header">
-    <button id="reloadBtn" title="Recharger le README.md">⟳ Reload</button>
+    <button id="reloadBtn" title="Reload README.md">⟳ Reload</button>
   </div>
-  <div id="content">Chargement du README.md...</div>
+  <div id="content">Loading README.md...</div>
   <script>
     async function loadReadme() {
       const content = document.getElementById('content');
       try {
         const response = await fetch('README.md');
-        if (!response.ok) throw new Error('README.md introuvable');
+        if (!response.ok) throw new Error('README.md untraceable');
         const text = await response.text();
         content.innerHTML = marked.parse(text);
       } catch (e) {
-        content.innerHTML = "<b>Erreur :</b> Impossible de charger le fichier README.md<br><pre>" + e + "</pre>";
+        content.innerHTML = "<b>Error :</b>Unable to load README.md file<br><pre>" + e + "</pre>";
       }
     }
     document.getElementById('reloadBtn').onclick = loadReadme;
     window.onload = loadReadme;
   </script>
 </body>
+
 </html>
