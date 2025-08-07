@@ -12,7 +12,7 @@
 
 - 📫 **contact@aircodes.net**
 
-- 🛠️ Tech:  **[Node.js](https://nodejs.org)** • **[Vite](https://vite.dev)** •  **[Discord.js](https://discord.js.org)** • **[SQLite](https://www.sqlite.org)** • **[Docker](https://www.docker.com)** • **[NGINX](https://nginx.org)**
+- 🛠️ Tech:  **[Node.js](https://nodejs.org)** • **[Vite](https://vite.dev)** •  **[Discord.js](https://discord.js.org)** • **[SQLite](https://www.sqlite.org)** • **[Docker](https://www.docker.com)** • **[Nginx](https://nginx.org)** • **[Vercel](https://vercel.com)**
 
 
 ---
